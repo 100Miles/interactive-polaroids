@@ -19,8 +19,9 @@ html {
   width: 100%;
 }
 
-figure {
+polaroid {
   position: relative;
+  transition: all 200ms linear;
 }
 
 .polaroid > figcaption {
@@ -28,7 +29,7 @@ figure {
   text-shadow: 1px 1px 3px #000;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(-125%);
+  transform: translateX(-50%) translateY(-150%);
 }
 
 body {
@@ -37,30 +38,29 @@ body {
 
 figure:first-child {
   position: absolute;
-  left: 50%;
-  transform: translateX(-75%);
+  left: 20%;
+  top: 100px;
+  z-index: 1;
+  transform: rotateZ(-15deg);
 }
 
 figure:nth-child(2) {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 30%;
+  top: 150px;
+  z-index: 3;
+  transform: rotateZ(5deg);
 }
 
 figure:nth-child(3) {
   position: absolute;
-  left: 50%;
-  transform: translateX(-25%);
+  left: 40%;
+  top: 100px;
+  z-index: 2;
+  transform: rotateZ(35deg);
 }
 
-figure:first-child:hover {
-  transform: translate3d(25px, 50px, 1px);
-}
+polaroid:hover {
+  transform: rotateZ(0deg) translateZ(5deg);
 
-figure:nth-child(2):hover {
-  transform: translate3d();
-}
-
-figure:nth-child(3):hover {
-  transform: translate3d();
 }
