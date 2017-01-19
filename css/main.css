@@ -19,7 +19,48 @@ html {
   width: 100%;
 }
 
+figure {
+  position: relative;
+}
+
 .polaroid > figcaption {
   color: #fff;
   text-shadow: 1px 1px 3px #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-125%);
+}
+
+body {
+  position: relative
+}
+
+figure:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-75%);
+}
+
+figure:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+figure:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-25%);
+}
+
+figure:first-child:hover {
+  transform: translate3d(25px, 50px, 1px);
+}
+
+figure:nth-child(2):hover {
+  transform: translate3d();
+}
+
+figure:nth-child(3):hover {
+  transform: translate3d();
 }
